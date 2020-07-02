@@ -1,0 +1,5 @@
+js如何获取盒模型对应的宽和高
+dom.style.widht/height
+dom.currentStyle.width/height
+window.getComputedStyle(dom).widht/height
+dom.getBoundingClietRect().width/height

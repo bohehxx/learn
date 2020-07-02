@@ -1,0 +1,37 @@
+在开发环境中我们使用：cheap-module-eval-source-map
+
+在生产环境中我们使用：cheap-module-source-map。
+
+module是指任意的文件模块，等价于commonjs中的模块
+
+chunks是webpack处理过程中被分组了的modules，如代码分割时一个异步加载的chunk可能包含多个module
+
+Bunldes是指打包出来的
+
+
+
+webpack优化
+1.减小体积
+  合理划分代码职责，适当使用按需加载方案；
+  善用 webpack-bundle-analyzer 插件，帮助分析 Webpack 打包后的模块依赖关系；
+  设置合理的 SplitChunks 分组；
+  对于一些 UI 组件库，例如 AntDesign、ElementUI 等，可以使用bable-plugin-import这类工具进行优化；
+   使用 lodash、momentjs 这类库，不要一股脑引入，要按需引入，momentjs 可以用 date-fns 库来代替；
+  合理使用 hash 占位符，防止 hash 重复出现，导致文件名变化从而 HTTP 缓存过期；
+  合理使用 polyfill，防止多余的代码；
+  使用 ES6 语法，尽量不使用具有副作用的代码，以加强 Tree-Shaking 的效果；
+  使用 Webpack 的 Scope Hoisting（作用域提升）功能。
+  css压缩
+   图片资源优化 
+2.增强缓存命中率
+  合理使用动态加载功能来拆分代码
+  多页面项目按照路由拆分代码
+  合理利用 HTTP 请求头的缓存相关字段，然后配合 Webpack 的chunkhash和contenthash可以做到根据文件内容和依赖关系变化而
+  增强浏览器缓存，另外根据代码的变更频率合理的拆分代码也能够起到缓存的最大作用，Webpack 中拆分代码用到的是动态加载方式
+  和optimization.splitChunks。
+3.splitChunks拆分代码
+4.使用 webpack-cli 命令来完成 Webpack 的零配置打包
+5.tree-shaking
+6. DllPlugin&DllReferencePlugin
+7. 使用多线程处理打包
+8.通过alias和extensions减少查找

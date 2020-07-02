@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>节流</title>
+    <style>
+        div{
+            height:100px;
+            line-height:100px;
+        }
+    </style>
+  </head>
+  <body>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+    <div>节流演示</div>
+  </body>
+  <script>
+    function throttle(func, wait, type) {
+      if (type == 1) {
+        var previous = 0;
+      } else {
+        var timeout;
+      }
+      return function() {
+        let context = this;
+        let args = arguments;
+        if (type == 1) {
+          var now = Date.now();
+          if (now - previous > wait) {
+            func.apply(context, args);
+            previous = now;
+          }
+        } else {
+          timeout = setTimeout(() => {
+            timeout = null;
+            func.apply(context, args);
+          }, wait);
+        }
+      };
+    }
+    function handle() {
+      console.log(Math.random());
+    }
+    window.addEventListener("scroll", throttle(handle, 5000));
+  </script>
+</html>
+<!-- 用一句话总结防抖和节流的区别：防抖是将多次执行变为最后一次执行，节流是将多次执行变为每隔一段时间执行 -->

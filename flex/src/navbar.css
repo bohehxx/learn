@@ -1,0 +1,40 @@
+/*
+ * @Author: Rosen 
+ * @Date: 2019-06-23 23:00:22 
+ * @Last Modified by: Rosen
+ * @Last Modified time: 2019-07-13 16:28:55
+ */
+
+/* 底部导航栏 */
+.tt-navbar{
+    display: flex;
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+    max-width: 640px;
+    height: 2.5rem;
+    border-top: 1px solid #ddd;
+    z-index: 200;
+    background: #f8f8f8;
+    text-align: center;
+}
+/* 导航项目 */
+.tt-navbar > .navbar-item{
+    color: #808080;
+    flex: 1;
+}
+/* 被选中的样式 */
+.tt-navbar > .navbar-item.active{
+    color: #09BB07;
+}
+/* 导航图标 */
+.tt-navbar > .navbar-item > .icon{
+    padding: .3rem 0 .1rem;
+    font-size: 1.1rem;
+}
+/* 导航名称 */
+.tt-navbar > .navbar-item > .name{
+    display: block;
+    font-size: .5rem;
+}

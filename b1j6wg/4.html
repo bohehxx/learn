@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+      .intro-container {
+        width: 400px;
+        height: 600px;
+        border: 1px solid red;
+        position: absolute;
+        left: 50px;
+      }
+      body {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="intro-container">
+      fddddddddddddddddd
+    </div>
+    <script>
+      // 定位的进行动画漂浮
+      function floatRule(floatObj) {
+        var top =
+          $(window).scrollTop() +
+          $(window).height() / 2 -
+          floatObj.height() / 2;
+        floatObj.css({
+          top: top
+        });
+        $(window).scroll(function() {
+          var top =
+            $(window).scrollTop() +
+            $(window).height() / 2 -
+            floatObj.height() / 2;
+          floatObj.css(
+            "top",
+            $(window).scrollTop() +
+              $(window).height() / 2 -
+              floatObj.height() / 2 +
+              "px"
+          );
+        });
+      }
+      floatRule($(".intro-container"));
+    </script>
+  </body>
+</html>

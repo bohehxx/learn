@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>防止margin重叠</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        color: #f55;
+        background: yellow;
+        width: 200px;
+        line-height: 100px;
+        text-align:center;
+        margin: 30px;
+    }
+    div{
+        overflow:hidden;
+    }
+</style>
+<body>
+    <p>看看我的 margin是多少</p>
+    <div>
+        <p>看看我的 margin是多少</p>
+    </div>
+    
+</body>
+</html>
+<!-- 如何创建BFC
+1、float的值不是none。
+2、position的值不是static或者relative。
+3、display的值是inline-block、table-cell、flex、table-caption或者inline-flex
+4、overflow的值不是visible
+————————————————
+版权声明：本文为CSDN博主「Leon_94」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/sinat_36422236/java/article/details/88763187 -->

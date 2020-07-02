@@ -1,0 +1,50 @@
+属性选择器比较好理解，就是通过 DOM 的属性来选择该 DOM 节点。
+[attr]，用来选择带有 attr 属性的元素，如刚提到的 a [href]
+[attr=xxx]，用来选择有 attr 属性且属性值等于 xxx 的元素，如选择所有文本类型的输入框，可以用 input [type=text]。
+[attr~=xxx]，这个选择器中间用了～=，选择属性值中包含 xxx 的元素，但一定是逗号分隔的多个值中有一个能和 xxx 相等才行
+<!-- HTML： -->
+<input class="input text" type="text" value="大花碗里扣个大花活蛤蟆"/>
+
+// CSS：
+input[class=input]{
+    color: red;
+}
+<!-- HTML： -->
+<input class="input text" type="text" value="大花碗里扣个大花活蛤蟆"/>
+
+// CSS：
+input[class~=input]{
+    color: red;
+}
+[attr|=xxx]，这个选择器是用来选择属性值为 xxx 或 xxx- 开头的元素，比较常用的场景是选择某一类的属性。
+<!-- HTML： -->
+<div class="article">我是article</div>
+<div class="article-title">我是article-title</div>
+<div class="article-content">我是article-content</div>
+<div class="article_footer">我是article_footer，不是以artical-开头的</div>
+
+// CSS：
+div[class|=article]{
+    color: red;
+}
+[attr^=xxx]，这个选择器会匹配以 xxx 开头的元素，实际上就是用正则去匹配属性值，只要是以 xxx 开头都可以。
+<!-- HTML： -->
+<div class="article">我是article</div>
+<div class="article-title">我是article-title</div>
+<div class="article-content">我是article-content</div>
+<div class="article_footer">我是article_footer，不是以artical-开头的</div>
+
+// CSS：
+div[class^=article]{
+    color: red;
+}
+[attr*=xxx]，最后一个，这个是用正则匹配的方式来选择属性值中包含 xxx 字符的所有元素。这个选择器的规则算是最宽泛的，只要 xxx 是元素属性值的子字符串，这个选择器就会生效。
+<!-- HTML： -->
+<button class="btn btn-disabled">禁用的按钮</button>
+<select class="select select-disabled city-select"></select>
+<input class="input input-disabled" value="禁用的输入框"/>
+
+// CSS：
+[class*=disabled]{
+    display: none;
+}

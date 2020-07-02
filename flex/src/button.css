@@ -1,0 +1,59 @@
+/*
+ * @Author: Rosen 
+ * @Date: 2019-07-06 10:55:19 
+ * @Last Modified by: Rosen
+ * @Last Modified time: 2019-07-07 10:11:25
+ */
+/* 按钮默认样式 */
+.tt-btn{
+    display: block;
+    position: relative;
+    width: 10rem;
+    margin: 0 auto;
+    padding: .5rem 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: .7rem;
+    text-align: center;
+    color: #000000;
+    border-radius: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    user-select:none;
+}
+/* 定制按钮样式 */
+
+/* 定制主操作按钮样式 */
+.tt-btn.tt-btn-primary{
+    background-color: #1AAD19;
+    color: #fff;
+}
+/* 定制警示类按钮样式 */
+.tt-btn.tt-btn-warning{
+    background-color: #E64340;
+    color: #fff;
+}
+/* 定制不可用按钮的样式 */
+.tt-btn.tt-btn-disabled{
+    background-color: #F7F7F7;
+    color: #999;
+    opacity: .6;
+}
+
+/* 定制按钮大小 */
+/* 大按钮 */
+.tt-btn.tt-btn-large{
+    width: 100%;
+    font-size: .9rem;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+/* 小按钮 */
+.tt-btn.tt-btn-small{
+    display: inline-block;
+    width: 3rem;
+    padding: .2rem 0;
+    font-size: .7rem;
+}
