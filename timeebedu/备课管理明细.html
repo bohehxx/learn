@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="./css/teachplan.css" />
+    <link rel="stylesheet" href="./page/paging.css" />
+</head>
+<body>
+        
+            <div class="teach-plan">
+                <div class="plan-content">
+                   <div class="bread">
+                        <a>教育局管理员空间</a> > <a>教学统计</a>
+                    </div>
+                    <div class="tab-box">
+                        <div class="tab">
+                            <button class="teach-btn">教研管理</button>
+                            <button class="teach-btn">校本测评</button>
+                            <button class="teach-btn active">备课管理</button>
+                            <button class="teach-btn">在线课程</button>
+                        </div>
+                    </div>
+                    <div class="select-box">
+                            <div class="select">
+                                    筛选：
+                                    <span class="com-opt" id="1">
+                                      学段
+                                      
+                                    </span>
+                                    <span class="com-opt" id="2">
+                                       教材版本(苏教）
+                                    </span>
+                
+                
+                                </div>
+                                <div class="select-dialog">
+                                      <ul class="clearfix">
+                                          <li class="actived" id="1">全部</li>
+                                          <li id="2">苏教版</li>
+                                          <li id="3">语文</li>
+                                          <li id="4">数学</li>
+                                          <li id="5">英语</li>
+                                          <li id="6">化学</li>
+                                          <li id="7">数学</li>
+                                          <li id="8">英语</li>
+                                          <li id="9">英语</li>
+                                          <li id="10">大幅度会计法</li>
+                                      </ul>
+                                      <div class="btn">
+                                          <button class="reset">重置</button>
+                                          <button class="confirm">确定</button>
+                                      </div>
+                                </div>
+                    </div>
+                    <div class="search-box">
+                            使用时间：<input type="text" class="date-input" placeholder="开始日期" id="test1"><input type="text" class="date-input" placeholder="截止日期" id="test2">
+                            学校搜索：<input type="text" class="school-name" placeholder="输入学校名称" />
+                            <button class="do-search">点击查询</button>
+                            
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>学校</th>
+                                <th>创建人</th>
+                                <th>学段</th>
+                                <th>学科</th>
+                                <th>教材名称</th>
+                                <th>备课总数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>合肥青年路小学 </td>
+                                <td>王某某</td>
+                                <td>小学</td>
+                                <td>语文</td>
+                                <td>小学.语文.人教版.二年级.下册.2002</td>
+                                <td>2222</td>
+                            </tr>
+                            <tr>
+                                <td >合肥青年路小学 </td>
+                                <td>王某某</td>
+                                <td>小学</td>
+                                <td>语文</td>
+                                <td>小学.语文.人教版.二年级.下册.2002</td>
+                                <td>2222</td>
+                            </tr>
+                            <tr>
+                                <td>合肥青年路小学 </td>
+                                <td>王某某</td>
+                                <td>小学</td>
+                                <td>语文</td>
+                                <td>小学.语文.人教版.二年级.下册.2002</td>
+                                <td>2222</td>
+                            </tr>
+                            <tr>
+                                <td>合肥青年路小学 </td>
+                                <td>王某某</td>
+                                <td>小学</td>
+                                <td>语文</td>
+                                <td>小学.语文.人教版.二年级.下册.2002</td>
+                                <td>2222</td>
+                            </tr>
+                            <tr>
+                                <td>合肥青年路小学 </td>
+                                <td>王某某</td>
+                                <td>小学</td>
+                                <td>语文</td>
+                                <td>小学.语文.人教版.二年级.下册.2002</td>
+                                <td>2222</td>
+                            </tr>
+                            <tr>
+                                <td>合肥青年路小学 </td>
+                                <td>王某某</td>
+                                <td>小学</td>
+                                <td>语文</td>
+                                <td>小学.语文.人教版.二年级.下册.2002</td>
+                                <td>2222</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+
+            <div class="page">
+                <div class="pageTool"></div>
+                跳到<input type="number" />
+            </div>
+            </div>
+            <script src="./laydate/laydate.js"></script> <!-- 改成你的路径 -->
+<script>
+    //日历插件
+lay('#version').html('-v'+ laydate.v);
+
+//执行一个laydate实例
+laydate.render({
+  elem: '#test1' //指定元素
+});
+//执行一个laydate实例
+laydate.render({
+  elem: '#test2' //指定元素
+});
+</script>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="./page/paging.js"> </script>
+  <script>
+      var page = new Paging();
+      page.init({	target: $('.pageTool'), pagesize: 10, count: 100, current:1,callback: function (pagecount, size, count) {
+      page.render({ count: 89, current: pagecount });
+      page.go(3);
+
+
+
+
+  }
+  });
+
+  </script>
+  <script>
+      //筛选弹框
+      $('.com-opt').click(function(e){
+        console.log(e.target)
+        $('.select-dialog').show();
+        $(this).addClass('book').siblings().removeClass('book');
+      })
+      $('.confirm').click(function(){
+        $('.select-dialog').hide();
+      })
+      $('.select-dialog li').click(function(e){
+          $(this).addClass('actived').siblings().removeClass('actived');
+      })
+      //tab切换
+      $(".tab .teach-btn").click(function(){
+          $(this).addClass('active').siblings().removeClass('active')
+      })
+      
+  </script>
+</body>
+</html>

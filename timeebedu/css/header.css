@@ -1,0 +1,175 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    
+}
+body{
+    font-family: 微软雅黑;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+.time-header{
+    width:100%;
+    height:118px;
+}
+.top-header{
+    width:1420px;
+    margin: 0 auto;
+    height:56px;
+   
+}
+.logo{
+    float:left;
+    padding-top:10px;
+     height:36px;
+    font-size:28px;
+    color:#018eed;
+    display:table-cell; 
+    text-align:center; 
+
+   
+}
+.logo img{
+    vertical-align:middle;
+   
+}
+.user-do{
+    float:right;
+    font-size:20px;
+    color:#018eed;
+    letter-spacing:2px;
+    margin-top:14px;
+}
+.user-center{
+    cursor:pointer;
+    float:left;
+    margin-right:5px;
+    width:160px;
+    text-align:center;
+    position:relative;
+}
+.user-do img{
+    vertical-align:text-bottom;
+    margin-right:8px;
+}
+li{
+    list-style:none;
+}
+.drop-menu{
+    display:none;
+    position:absolute;
+    background:#fff;
+    width:160px;
+    padding-top:10px;
+    text-align:center;
+    font-size:16px;
+    color:#666;
+    border-radius:5px;
+    z-index:999;
+  
+}
+.drop-menu  li{
+    height:50px;
+    line-height:50px;
+    cursor:pointer;
+}
+.drop-menu li:first-child{
+    border-bottom:1px solid #018eed;
+}
+.logout{
+    float:left;
+    cursor:pointer;
+    
+}
+.nav-box{
+    width:100%;
+    height:66px;
+    line-height:66px;
+    background:#018eed;
+
+}
+.nav-box2{
+    width:1420px;
+    margin:0 auto;
+
+}
+.nav{
+   
+    width:1265px;
+    font-size:18px;
+    color:#fff;
+    display: flex;
+    justify-content: space-around;
+    /* margin-left:-20px; */
+}
+.nav li{
+    list-style:none;
+    display:block;
+    /* float:left; */
+    cursor:pointer;
+    
+    margin-top:5px;
+    position:relative;
+    padding:0 20px;
+
+}
+.sub-menu{
+    display:none;
+    position:absolute;
+    background:#fff;
+    color:#666;
+    left:50%;
+    height:40px;
+    line-height:40px;
+    top:61px;
+
+    
+
+}
+.sub-menu div{
+    float:left;
+    margin:0 29px;
+}
+.nav li:hover{
+    
+    border:none;
+    color:#018eed;
+    background:#fff;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+.nav li:last-child{
+    margin-right:0;
+}
+@media screen and (max-width:1500px){
+   .nav{
+        width:1128px;
+    }
+    .top-header{
+        width:1100px;
+    }
+    .nav li{
+        list-style:none;
+        display:block;
+        float:left;
+        cursor:pointer;
+        margin-top:5px;
+        padding:0 14px;
+    
+    }
+}
+
+

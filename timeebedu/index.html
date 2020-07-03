@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+</head>
+
+<body>
+    <div class="time-header">
+        <div class="top-header">
+            <div class="logo">
+
+                <img src="./images/logo.png" width="192" height="54" /> 合肥市教育局管理员空间
+            </div>
+            <div class="user-do">
+                <div class="user-center">
+                    <img src="./images/usercenter.png" width="25" height="27" />个人中心
+                    <ul class="drop-menu">
+                        <li>个人信息</li>
+                        <li>账户管理</li>
+                    </ul>
+                </div>
+                <div class="logout">
+                    <img src="./images/logout.png" width="23" height="26" />退出
+                </div>
+            </div>
+
+        </div>
+
+        <div class="nav-box">
+            <ul class="nav">
+                <li>首页</li>
+                <li>信息管理</li>
+                <li>教育寄出数据统计</li>
+                <li>用户使用统计</li>
+                <li>资源统计</li>
+                <li>教学统计</li>
+                <li>智慧课堂</li>
+                <li>校园活动</li>
+                <li>云图书馆</li>
+                <li>通知公告</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="index-box">
+        <div class="index-content">
+            <div class="bread">
+                教育局管理员空间 > 首页
+            </div>
+            <div class="space-resourse clearfix">
+                <div class="space-box">
+
+                    <div class="title">
+                        空间开通
+                    </div>
+
+
+
+
+                </div>
+                <div class="resourse-box">
+                    <div class="title">
+                        资源建设
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="notice-rank clearfix">
+                <div class="notice">
+                    <div class="title">
+                        业务监控
+                    </div>
+                </div>
+                <div class="rank">
+                    <div class="rank-title">学校使用排行榜</div>
+                    <ul>
+                        <li><span class="rank-num"><img src="./images/rank1.png" /></span><span
+                                class="school">合肥市青年路小学</span><span class="visit-num">87651</span></li>
+                        <li><span class="rank-num"><img src="./images/rank2.png" /></span><span
+                                class="school">合肥市青年路小学</span><span class="visit-num">87651</span></li>
+                        <li><span class="rank-num"><img src="./images/rank3.png" /></span><span
+                                class="school">合肥市青年路小学</span><span class="visit-num">87651</span></li>
+                        <li><span class="rank-num">4</span><span class="school">合肥市青年路小学ff</span><span
+                                class="visit-num">87651</span></li>
+                        <li><span class="rank-num">5</span><span class="school">合肥市青年路小学</span><span
+                                class="visit-num">87651</span></li>
+                        <li><span class="rank-num">6</span><span class="school">合肥市青年路小学</span><span
+                                class="visit-num">87651</span></li>
+                        <li><span class="rank-num">7</span><span class="school">合肥市青年路小学</span><span
+                                class="visit-num">87651</span></li>
+                        <li><span class="rank-num">8</span><span class="school">合肥市青年路小学</span><span
+                                class="visit-num">87651</span></li>
+                        <li><span class="rank-num">9</span><span class="school">合肥市青年路小学</span><span
+                                class="visit-num">87651</span></li>
+                        <li><span class="rank-num">10</span><span class="school">合肥市青年路小学</span><span
+                                class="visit-num">87651</span></li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="visit">
+                <div class="title">
+                    平台访问量
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+        //导航二级类目显示隐藏
+        $(".user-center").mouseenter(function () {
+
+
+            $(this).children(".drop-menu").show();
+        })
+        $(".user-center").mouseleave(function () {
+            $(this).children(".drop-menu").hide();
+        })
+        $(".nav li").mouseenter(function () {
+
+
+            $(this).children(".sub-menu").show();
+        })
+        $(".nav li").mouseleave(function () {
+            $(this).children(".sub-menu").hide();
+        })
+    </script>
+
+</body>
+
+</html>

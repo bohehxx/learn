@@ -1,0 +1,380 @@
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+*{
+    margin:0;
+    padding:0;
+}
+/* 弹框样式 */
+.dialog{
+    /* display:none; */
+    width:100%;
+    height:100%;
+    position:fixed;
+    background:rgba(0,0,0,.4);
+    z-index:2;
+}
+.teach-detail{
+    width:80%;
+    height:655px;
+    border-radius:5px;
+    background:#fff;
+    position:absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+}
+.detail-header{
+    height:72px;
+    line-height:72px;
+    background:#f8f8f8;
+    color:#333;
+    font-size:18px;
+    padding:0 40px;
+}
+.detail-header p{
+    float:left;
+}
+.close{
+    float:right;
+    cursor:pointer;
+    
+}
+.teach-info{
+    padding:0 40px;
+}
+.info-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.info-list li{
+    list-style:none;
+    display:block;
+    float:left;
+    margin-top:20px;
+    margin-bottom:25px;
+
+}
+.dialog-table {
+    margin:0 40px;;
+}
+.dialog-table  table{
+    
+   width:100%;
+   margin-bottom:30px;
+
+   border-right: 1px solid #e6e6e6;
+   border-bottom: 1px solid #e6e6e6;
+
+  
+/* 
+   border-spacing: 0;去掉单元格间隙 */
+
+}
+.dialog-table table th{
+    font-weight:100;
+    background:#f6f7f9;
+}
+.dialog-table table td,.dialog-table table th
+{
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    font-size:16px;;
+    color:#333;
+    border-left: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+   
+  
+}
+
+.dialog-table table tr:nth-child(odd){
+    
+    background:#fff;
+   
+   
+}
+.dialog-table table tr:nth-child(even){
+    background:#f6f7f9;
+}
+/* 页面样式 */
+.teach-plan{
+    background:#eff0f5;
+    padding:0 26px 95px 26px;
+
+}
+.plan-content{
+    
+   
+    margin:0 auto;
+    background:#fff;
+
+}
+.bread{
+    height:40px;
+    line-height:40px;
+    font-size:14px;
+    color:#666;
+    padding-left:26px;
+    background:#eff0f5;
+}
+.bread a{
+    display:inline-block;
+    text-decoration:none;
+    color:#666;
+}
+.tab-box{
+    padding:30px 40px 15px 40px;
+    border-bottom:6px solid #eff0f5
+    
+
+}
+.tab{
+    height:65px;
+    
+}
+.teach-btn{
+    outline:none;
+    border:none;
+    width:116px;
+    height:44px;
+    line-height:44px;
+    font-size:18px;
+    color:#018eed;
+    border-radius:5px;
+    text-align:center;
+    cursor:pointer;
+    display:block;
+    float:left;
+    margin-right:20px;
+}
+.active{
+    background:#018eed;
+    color:#fff;
+
+}
+.teach-btn:hover{
+    background:#018eed;
+    color:#fff;
+}
+.select-box{
+    background:#fff;
+    height:60px;
+    font-size:18px;
+    padding-top:25px;
+    position:relative;
+}
+.select{
+    padding-left:35px;
+}
+.com-opt {
+    cursor:pointer;
+    margin-left:60px;
+    font-size:18px;
+    color: #333;
+    padding-right:18px;
+    padding-left:10px;
+    background: url("../images/triangle.png") no-repeat right center transparent;
+
+}
+.select-dialog{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:30px;
+    width:590px;
+    background:#fff;
+    border:1px solid #d9d9d9;
+}
+.select-dialog ul{
+    width:490px;
+    margin:20px auto 0;
+    padding: 0 40px;
+  
+}
+.select-dialog li{
+    cursor:pointer;
+    padding:5px 22px;
+    border:1px solid #f3f3f3;
+    border-radius:5px;
+    list-style:none;
+    float:left;
+    margin:0 6px 17px 6px;
+    font-size:16px;
+}
+.select-dialog li.actived{
+    background:#fff9ed;
+    color:#fec85b;
+    border-color:#fee7b6;
+}
+.btn{
+    width:490px;
+    margin:0 auto 20px;
+}
+.reset{
+    cursor:pointer;
+    outline:none;
+    border:none;
+    appearance:none;
+    -moz-appearance:none; 
+    -webkit-appearance:none;
+    background:#fff;
+    width:124px;
+    height:36px;
+    line-height:36px;
+    text-align:center;
+    box-sizing:border-box;
+    color:#ffb319;
+    border:1px solid #ffb319;
+    border-radius:8px;
+    margin:0 30px 0 111px;
+    
+}
+.reset:hover{
+    background:#fff9ed;
+  
+    
+   
+  }
+.confirm{
+    cursor:pointer;
+    outline:none;
+    border:none;
+    appearance:none;
+    -moz-appearance:none; 
+    -webkit-appearance:none;
+    background:#ffb319;
+    width:124px;
+    height:36px;
+    line-height:36px;
+    text-align:center;
+    color:#fff;
+    border-radius:8px;
+}
+.confirm:hover{
+    background:#ffc86f;
+}
+.book{
+    background: url("../images/triangleactive.png") no-repeat right center transparent;
+    color:#ffb319;
+}
+select::-ms-expand{display:none;}
+.search-box{
+    background:#fff;
+    padding-left:30px;
+    margin:20px auto 25px;
+    font-size:16px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.date-input{
+    width:204px;
+    height:40px;
+    text-indent:15px;
+    font-size:16px;
+    border:none;
+    outline:none;
+    border-radius:5px;
+    background:url("../images/calendarbg.png") no-repeat right center;
+}
+.date-input:first-child{
+    margin-left:30px;
+    margin-right:8px;
+}
+.date-input:nth-child(2){
+    margin-right:70px;
+}
+
+input::-webkit-input-placeholder{
+    color:#ccc;
+    font-size:16px;
+    text-indent:15px;
+}
+
+input::-moz-placeholder{
+    color:#ccc;
+    font-size:16px;
+    text-indent:15px;
+}
+
+input:-ms-input-placeholder{
+    color:#ccc;
+    font-size:16px;
+    text-indent:15px;
+}
+.school-name{
+    width:300px;
+    height:40px;
+    text-indent:15px;
+    font-size:16px;
+    border:none;
+    outline:none;
+    border:1px solid #d9d9d9;
+    border-radius:5px;
+    margin-left:17px;
+}
+.do-search{
+    cursor:pointer;
+    width:106px;
+    height:40px;
+    font-size:16px;
+    border:none;
+    outline:none;
+    background:#018eed;
+    text-align:center;
+    color:#fff;
+    border-radius:5px;
+    margin-left:22px;
+}
+.do-search:hover{
+    background:#44a7ea;
+}
+.table-container{
+
+    min-height:380px;
+    margin:30px;
+    border-bottom:30px solid #fff;
+
+
+}
+.table-container table{
+    display:table;
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:30px;
+
+    
+}
+.table-container table th{
+    text-align:center;
+
+}
+.table-container table td,.table-container table th
+{
+    height:55px;
+    line-height:55px;
+    text-align:center;
+   
+  
+}
+.table-container table th{
+    background:#f2f2f2;
+}
+.table-container table tr:nth-child(odd){
+    
+    background:#fff;
+}
+.table-container table tr:nth-child(even){
+    background:#f8f8f8;
+   
+}
+.layui-this{
+    background:#018eed !important;
+}
